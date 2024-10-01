@@ -1,1 +1,39 @@
+2.1
 
+a = int(input())
+b = int(input())
+if b ==0:
+    print("Не дели на ноль")
+elif b!= 0:
+    print(a/b)
+elif a!= 0:
+    print(b/a)
+elif a==0:
+    print("Не дели на ноль")
+
+2.2
+
+a = int(input())
+b = 0.35
+if a>20:
+  print(round((a - a*b),2))
+else:
+  print (a)
+
+2.3
+
+a=int(input())
+if a == 12 or a == 1 or a == 2:
+    season = "зима"
+elif a>= 3 and a<=5:
+    season = "весна"
+elif a>=6 and a<= 8:
+    season = "лето"
+elif a>=9 and a<= 11:
+    season = "осень"
+else:
+    season = None
+if season:
+    print(f"Месяц {a} {season}")
+else:
+ print("Неправильно")
