@@ -1,1 +1,37 @@
+4.1
 
+s = input()
+k=m=0
+for i in range(len(s)):
+ if s[i]=='н':
+  k+=1
+else:
+    m=max(m,k)
+k=0
+s=s.replace('н','!')
+print(m)
+print(s)
+
+4.2
+
+s = input()
+for i in'[{':
+    s = s.replace(i,'(')
+for i in ']}':
+    s = s.replace(i, ')')
+    for i in range(len(s)):
+        if s[i]=="(":
+            a=i
+        elif s[i]==')':
+            b=i
+print(s[a+1:b])
+
+4.3
+
+s = input()
+s = s.split()
+a=''
+for i in s:
+    if i[0].lower()=='а'and i[-1]=='я':
+        a+=i + ''
+print(a)
