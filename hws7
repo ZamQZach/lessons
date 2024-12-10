@@ -1,4 +1,5 @@
 #1
+
 import os
 
 def print_docs(directory):
@@ -12,7 +13,9 @@ def print_docs(directory):
         print(f"Директория {directory} не существует.")
 
 print_docs('gug')#вместо 'gug' - директория
+
 #2
+
 def read_last(lines, file):
     abstract_file = open(file, 'r', encoding='utf-8')
     rows = abstract_file.readlines()
@@ -25,7 +28,9 @@ rows_number = len(file.readlines())
 
 if n > 0 and n < rows_number:
   read_last(n, a)
+
 #3
+
 def longest_words(file):
     with open(file, 'r', encoding='utf-8') as f:
         content = f.read()
