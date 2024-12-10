@@ -2,23 +2,6 @@
 
 import math
 
-def angle(x1, x2, y1, y2, z1, z2):
-
-    points = [(x1, x2), (y1, y2), (z1, z2)]
-    min_angle = float('inf')
-    min_point = (0,0)
-
-    for x, y in points:
-        if x == 0 and y == 0:
-            continue
-        angle = math.atan2(y, x)
-        if abs(angle) < min_angle:
-            min_angle = abs(angle)
-            min_point = (x, y)
-
-    return min_point
-
-
 x1 = float(input("Введите x1: "))
 x2 = float(input("Введите x2: "))
 y1 = float(input("Введите y1: "))
@@ -26,8 +9,24 @@ y2 = float(input("Введите y2: "))
 z1 = float(input("Введите z1: "))
 z2 = float(input("Введите z2: "))
 
-min_point = angle(x1, x2, y1, y2, z1, z2)
-print(f"Точка с минимальным углом: {min_point}")
+def angle(x1, x2, y1, y2, z1, z2):
+
+    p = [(x1, x2), (y1, y2), (z1, z2)]
+    mina = float('inf')
+    minp = (0,0)
+
+    for x, y in p:
+        if x == 0 and y == 0:
+            continue
+        angle = math.atan2(y, x)
+        if abs(angle) < mina:
+            mina = abs(angle)
+            minp = (x, y)
+
+    return minp
+
+minp = angle(x1, x2, y1, y2, z1, z2)
+print(f"Точка с минимальным углом: {minp}")
 
 #5.2
 
