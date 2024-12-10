@@ -1,1 +1,45 @@
+#5.1
 
+import math
+
+def angle(x1, x2, y1, y2, z1, z2):
+
+    points = [(x1, x2), (y1, y2), (z1, z2)]
+    min_angle = float('inf')
+    min_point = (0,0)
+
+    for x, y in points:
+        if x == 0 and y == 0:
+            continue
+        angle = math.atan2(y, x)
+        if abs(angle) < min_angle:
+            min_angle = abs(angle)
+            min_point = (x, y)
+
+    return min_point
+
+
+x1 = float(input("Введите x1: "))
+x2 = float(input("Введите x2: "))
+y1 = float(input("Введите y1: "))
+y2 = float(input("Введите y2: "))
+z1 = float(input("Введите z1: "))
+z2 = float(input("Введите z2: "))
+
+min_point = angle(x1, x2, y1, y2, z1, z2)
+print(f"Точка с минимальным углом: {min_point}")
+
+#5.2
+
+def p(n):
+    primes = []
+    for i in range(2, n + 1):
+        binary = bin(i)[2:]
+        if binary == binary[::-1] and all(i % j for j in range(2, int(i**0.5) + 1)):
+            primes.append(i)
+    return primes
+
+n = int(input("Введите максимальное число: "))
+
+result = p(n)
+print(f"Простые числа <= {n} с палиндромной двоичной записью: {result}")
