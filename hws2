@@ -1,4 +1,4 @@
-2.1
+#2.1
 
 a = int(input())
 b = int(input())
@@ -11,7 +11,7 @@ elif a!= 0:
 elif a==0:
     print("Не дели на ноль")
 
-2.2
+#2.2
 
 a = int(input())
 b = 0.35
@@ -20,7 +20,7 @@ if a>20:
 else:
   print (a)
 
-2.3
+#2.3
 
 a=int(input())
 if a == 12 or a == 1 or a == 2:
