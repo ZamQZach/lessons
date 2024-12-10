@@ -1,4 +1,4 @@
-4.1
+#4.1
 
 s = input()
 k=m=0
@@ -12,7 +12,7 @@ s=s.replace('н','!')
 print(m)
 print(s)
 
-4.2
+#4.2
 
 s = input()
 for i in'[{':
@@ -26,7 +26,7 @@ for i in ']}':
             b=i
 print(s[a+1:b])
 
-4.3
+#4.3
 
 s = input()
 s = s.split()
